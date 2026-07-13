@@ -27,6 +27,7 @@ import VisionViewerDiagram from "./components/VisionViewerDiagram";
 import LabSection from "./components/LabSection";
 import HowIThinkSection from "./components/HowIThinkSection";
 import SurfacesSection from "./components/SurfacesSection";
+import GitHubActivity from "./components/github/GitHubActivity";
 
 // Data imports
 import { PROJECT_ARCHIVE, TECHNICAL_STACK, Project } from "./data";
@@ -779,6 +780,9 @@ export default function App() {
         >
           <SurfacesSection />
         </section>
+
+        {/* ---------------- GITHUB ACTIVITY SECTION ---------------- */}
+        <GitHubActivity />
 
         {/* ---------------- TECHNICAL STACK SECTION ---------------- */}
         <section 
