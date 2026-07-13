@@ -18,7 +18,7 @@ export function GitHubActivity() {
     let active = true;
     setLoading(true);
 
-    fetch(`/api/github?username=${username}&year=${selectedYear}`)
+    fetch(`/api/github-contributions?year=${selectedYear}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch GitHub data");
@@ -35,7 +35,7 @@ export function GitHubActivity() {
       .catch((err) => {
         console.error("Error fetching GitHub data:", err);
         if (active) {
-          setError(err.message || "Could not retrieve GitHub activity details.");
+          setError("GitHub activity is temporarily unavailable.");
           setLoading(false);
         }
       });
